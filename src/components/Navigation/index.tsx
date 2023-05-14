@@ -1,5 +1,8 @@
 import Link from 'components/Link';
 import Button from 'components/Button';
+import {
+  iconLookup,
+} from 'common.style';
 
 export default function Navigation () {
   return (
@@ -13,9 +16,8 @@ export default function Navigation () {
             <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
             <span className="sr-only">Search</span>
           </Button>
-          <div className="relative hidden md:block">
-            <Button>SEARCH</Button>
-            <Button>Search</Button>
+          <div className="hidden md:flex">
+            <Button className="button-search" iconUrl={iconLookup.searchIcon} size={20}>SEARCH</Button>
             <Button>LOG OUT</Button>
           </div>
           <Button data-collapse-toggle="navbar-search" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">

@@ -1,3 +1,7 @@
+import { 
+  StyledButton,
+  StyledButtonIcon
+} from './index.style';
 interface ButtonType {
   children: JSX.Element|JSX.Element[]|string
   [k: string]: any
@@ -5,6 +9,8 @@ interface ButtonType {
 export default function Button (props: ButtonType) {
   const { classList, text, children, ...rest } = props;
   return (
-    <button {...rest} type="button">{children}</button>
+    rest.iconUrl ?
+    <StyledButtonIcon {...rest} type="button">{children}</StyledButtonIcon>
+    :<StyledButton {...rest} type="button">{children}</StyledButton>
   )
 }
