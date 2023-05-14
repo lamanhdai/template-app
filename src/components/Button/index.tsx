@@ -1,6 +1,5 @@
 import { 
-  StyledButton,
-  StyledButtonIcon
+  StyledButton
 } from './index.style';
 interface ButtonType {
   children: JSX.Element|JSX.Element[]|string
@@ -9,8 +8,6 @@ interface ButtonType {
 export default function Button (props: ButtonType) {
   const { classList, text, children, ...rest } = props;
   return (
-    rest.iconUrl ?
-    <StyledButtonIcon {...rest} type="button">{children}</StyledButtonIcon>
-    :<StyledButton {...rest} type="button">{children}</StyledButton>
+    <StyledButton {...rest} type="button">{children}</StyledButton>
   )
 }
