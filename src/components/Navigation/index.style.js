@@ -25,14 +25,14 @@ export const StyledNavItem = styled.li`
 
 export const StyledNavLinkItem = styled(LinkBase)`
   color: ${color.grayLink};
-  font-size: 14px;
+  font-size: 12px;
   font-family: "novecento_sans_widedemibold";
 `
 
 export const StyledNav = styled.nav`
   padding: 30px 15px 5px;
   @media (min-width: 769px) {
-    padding: 55px 0;
+    padding: 55px 15px;
   }
 `
 
@@ -44,6 +44,7 @@ export const StyledButtonSearch = styled(Button)`
   padding: 7px 14px;
   line-height: 100%;
   margin-right: 3px;
+  font-size: 11px;
   &::before {
     content: "";
     display: block;
@@ -70,10 +71,11 @@ export const StyledButtonLogout = styled(Button)`
   padding: 7px 14px;
   line-height: 100%;
   margin-right: 3px;
+  font-size: 11px;
   &::before {
     content: "";
     display: block;
-    background-image: url(${iconLookup.searchIcon || ''});
+    background-image: url(${iconLookup.lockIcon || ''});
     background-repeat: no-repeat;
     width: ${({size}) => size || 0}px;
     height: ${({size}) => size || 0}px;
@@ -83,7 +85,7 @@ export const StyledButtonLogout = styled(Button)`
     background: #6e6e6e;
     color: #fff;
     &::before {
-      background-image: url(${iconLookup.searchIconWhite || ''});
+      background-image: url(${iconLookup.lockIconWhite || ''});
     }
   }
 `

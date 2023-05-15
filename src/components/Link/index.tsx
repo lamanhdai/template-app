@@ -1,6 +1,6 @@
 import {
-  Link
-} from 'react-router-dom';
+  StyledLink
+} from './index.style'
 
 interface LinkType {
   children: React.ReactElement|String
@@ -10,6 +10,6 @@ interface LinkType {
 export default function LinkBase(props: LinkType) {
   const { classList, children, url, ...rest } = props;
   return (
-    <Link to={url} {...rest}>{children}</Link>
+    <StyledLink to={url} {...rest}>{children}</StyledLink>
   )
 }
