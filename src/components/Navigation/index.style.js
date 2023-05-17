@@ -89,3 +89,8 @@ export const StyledButtonLogout = styled(Button)`
     }
   }
 `
+export const StyledMainNav = styled.ul`
+  @media (min-width: 769px) {
+    margin-left: 80px;
+  }
+`
