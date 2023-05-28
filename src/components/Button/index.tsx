@@ -8,6 +8,6 @@ interface ButtonType {
 export default function Button (props: ButtonType) {
   const { classList, text, children, ...rest } = props;
   return (
-    <StyledButton {...rest} type="button">{children}</StyledButton>
+    <StyledButton className={rest.className} disabled={rest.disabled} type="button" onClick={rest.onClick}>{children}</StyledButton>
   )
 }

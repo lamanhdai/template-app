@@ -10,6 +10,6 @@ interface LinkType {
 export default function LinkBase(props: LinkType) {
   const { classList, children, url, ...rest } = props;
   return (
-    <StyledLink to={url} {...rest}>{children}</StyledLink>
+    <StyledLink to={url} className={rest.className}>{children}</StyledLink>
   )
 }

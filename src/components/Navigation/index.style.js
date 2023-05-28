@@ -8,7 +8,7 @@ import {
 } from 'common.style'
 
 export const StyledLogo = styled(LinkBase)`
-  color: ${color.gray};
+  color: ${color.grayLogoText};
   display: block;
   font-family: "novecento_sans_widedemibold";
   font-size: 21px;
@@ -20,77 +20,123 @@ export const StyledLogo = styled(LinkBase)`
 `
 
 export const StyledNavItem = styled.li`
-  padding-right: 40px;
+  text-align: center;
+  padding: 10px 0;
+  @media (min-width: 769px) {
+    padding-right: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 `
 
 export const StyledNavLinkItem = styled(LinkBase)`
-  color: ${color.grayLink};
+  color: ${color.grayText};
   font-size: 12px;
   font-family: "novecento_sans_widedemibold";
 `
 
 export const StyledNav = styled.nav`
-  padding: 30px 15px 5px;
-  @media (min-width: 769px) {
-    padding: 55px 15px;
+  .container {
+    padding: 30px 15px 5px;
+    @media (min-width: 769px) {
+      padding: 55px 15px;
+    }
+  }
+  .main-nav {
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 1px solid #dfdfdf;
+    @media (min-width: 769px) {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #dfdfdf;
+    }
+    @media (min-width: 991px) {
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .button-nav {
+    display: inline-block;
+    @media (min-width: 769px) {
+      display: flex;
+    }
+    &__item {
+      margin-right: 3px;
+      margin-bottom: 5px;
+      @media (min-width: 769px) {
+        margin-bottom: 0;
+      }
+    }
   }
 `
 
-export const StyledButtonSearch = styled(Button)`
+export const StyledButtonHeader = styled(Button)`
   display: inline-flex;
   align-items: center;
   background: #f0f0f0;
   color: #9d9c9c;
   padding: 7px 14px;
   line-height: 100%;
-  margin-right: 3px;
   font-size: 11px;
-  &::before {
-    content: "";
-    display: block;
-    background-image: url(${iconLookup.searchIcon || ''});
-    background-repeat: no-repeat;
-    width: ${({size}) => size || 0}px;
-    height: ${({size}) => size || 0}px;
-    padding-right: 20px;
-  }
-  &:hover {
-    background: #6e6e6e;
-    color: #fff;
+  .button-search {
     &::before {
-      background-image: url(${iconLookup.searchIconWhite || ''});
+      content: "";
+      display: block;
+      background-image: url(${iconLookup.searchIcon || ''});
+      background-repeat: no-repeat;
+      width: ${({size}) => size || 0}px;
+      height: ${({size}) => size || 0}px;
+      padding-right: 20px;
+    }
+    &:hover {
+      background: #6e6e6e;
+      color: #fff;
+      &::before {
+        background-image: url(${iconLookup.searchIconWhite || ''});
+      }
+    }
+  }
+  .button-logout {
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(${iconLookup.lockIcon || ''});
+      background-repeat: no-repeat;
+      width: ${({size}) => size || 0}px;
+      height: ${({size}) => size || 0}px;
+      padding-right: 20px;
+    }
+    &:hover {
+      background: #6e6e6e;
+      color: #fff;
+      &::before {
+        background-image: url(${iconLookup.lockIconWhite || ''});
+      }
+    }
+  }
+  .button-product {
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(${iconLookup.cartIcon || ''});
+      background-repeat: no-repeat;
+      width: ${({size}) => size || 0}px;
+      height: ${({size}) => size || 0}px;
+      padding-right: 20px;
+    }
+    &:hover {
+      background: #6e6e6e;
+      color: #fff;
+      &::before {
+        background-image: url(${iconLookup.cartIconWhite || ''});
+      }
     }
   }
 `
 
-export const StyledButtonLogout = styled(Button)`
-  display: inline-flex;
-  align-items: center;
-  background: #f0f0f0;
-  color: #9d9c9c;
-  padding: 7px 14px;
-  line-height: 100%;
-  margin-right: 3px;
-  font-size: 11px;
-  &::before {
-    content: "";
-    display: block;
-    background-image: url(${iconLookup.lockIcon || ''});
-    background-repeat: no-repeat;
-    width: ${({size}) => size || 0}px;
-    height: ${({size}) => size || 0}px;
-    padding-right: 20px;
-  }
-  &:hover {
-    background: #6e6e6e;
-    color: #fff;
-    &::before {
-      background-image: url(${iconLookup.lockIconWhite || ''});
-    }
-  }
-`
 export const StyledMainNav = styled.ul`
-  @media (min-width: 769px) {
+  @media (min-width: 991px) {
     margin-left: 80px;
   }
 `
