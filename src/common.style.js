@@ -4,6 +4,7 @@ import lockIcon from 'assets/img/lock.svg'
 import lockIconWhite from 'assets/img/lock-white.svg'
 import cartIcon from 'assets/img/cart.svg'
 import cartIconWhite from 'assets/img/cart-white.svg'
+import barIcon from 'assets/img/menu.svg'
 // variable
 export const iconLookup = {
   searchIcon,
@@ -11,7 +12,8 @@ export const iconLookup = {
   lockIcon,
   lockIconWhite,
   cartIcon,
-  cartIconWhite
+  cartIconWhite,
+  barIcon
 }
 
 export const color = {

@@ -17,11 +17,16 @@ export const StyledLogo = styled(LinkBase)`
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 4px;
+  text-decoration: none;
+  &:hover {
+    color: ${color.grayLogoText};
+  }
 `
 
 export const StyledNavItem = styled.li`
   text-align: center;
   padding: 10px 0;
+  border-bottom: 1px solid #dfdfdf;
   @media (min-width: 769px) {
     padding-right: 40px;
     padding-top: 0;
@@ -33,18 +38,41 @@ export const StyledNavLinkItem = styled(LinkBase)`
   color: ${color.grayText};
   font-size: 12px;
   font-family: "novecento_sans_widedemibold";
+  text-decoration: none;
+  display: block;
+  &:hover {
+    color: currentColor;
+  }
 `
 
-export const StyledNav = styled.nav`
-  .container {
-    padding: 30px 15px 5px;
-    @media (min-width: 769px) {
-      padding: 55px 15px;
+export const StyledHeader = styled.div`
+  .header {
+    &__brand {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    &__mobile-menu {
+      width: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    &-controls {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
     }
   }
+  .row {
+    align-items: center;
+  }
+  .toggle-nav {
+    background-image: url(${iconLookup.barIcon});
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+  }
   .main-nav {
-    padding: 10px 0;
-    margin-top: 20px;
     border-top: 1px solid #dfdfdf;
     @media (min-width: 769px) {
       margin-bottom: 20px;
@@ -54,9 +82,13 @@ export const StyledNav = styled.nav`
       border-top: 0;
       border-bottom: 0;
     }
+    &__list {
+      list-style: none;
+      padding-left: 0;
+    }
   }
 
-  .button-nav {
+  /* .button-nav {
     display: inline-block;
     @media (min-width: 769px) {
       display: flex;
@@ -68,7 +100,7 @@ export const StyledNav = styled.nav`
         margin-bottom: 0;
       }
     }
-  }
+  } */
 `
 
 export const StyledButtonHeader = styled(Button)`
@@ -79,7 +111,9 @@ export const StyledButtonHeader = styled(Button)`
   padding: 7px 14px;
   line-height: 100%;
   font-size: 11px;
-  .button-search {
+  border: 0;
+  margin-bottom: 5px;
+  &.button-search {
     &::before {
       content: "";
       display: block;
@@ -97,7 +131,7 @@ export const StyledButtonHeader = styled(Button)`
       }
     }
   }
-  .button-logout {
+  &.button-logout {
     &::before {
       content: "";
       display: block;
@@ -115,7 +149,7 @@ export const StyledButtonHeader = styled(Button)`
       }
     }
   }
-  .button-product {
+  &.button-product {
     &::before {
       content: "";
       display: block;
