@@ -7,39 +7,49 @@ import {
 } from 'common.style'
 
 export const StyledFooter = styled.footer`
-  padding: 0 15px;
   @media (min-width: 769px) {
-    padding: 100px 15px;
+    padding: 100px 0;
     border-top: 1px solid #dfdfdf;
   }
-  .footer-column {
-    padding: 40px 0;
-    border-top: 1px solid #dfdfdf;
-    @media (min-width: 769px) {
-      padding: 0;
-      border-top: 0;
+  .footer {
+    &-column {
+      padding: 40px 0;
+      border-top: 1px solid #dfdfdf;
+      @media (min-width: 769px) {
+        padding: 0;
+        border-top: 0;
+      }
     }
+    &__nav {
+      padding-left: 0;
+      margin-bottom: 0;
+      &-item {
+        list-style-type: none;
+        padding-bottom: 24px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    &__address {
+        font: normal 16px/30px arial, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        &-line {
+          margin-bottom: 30px;
+        }
+      }
+      &__title {
+        font-size: 12px;
+        color: #6d6d6d;
+        font-family: "novecento_sans_widedemibold";
+        margin-bottom: 20px;
+      }
   }
-`
-
-export const StyledFooterTitle = styled.div`
-  font-size: 12px;
-  color: #6d6d6d;
-  font-family: "novecento_sans_widedemibold";
-  margin-bottom: 16px;
-`
-
-export const StyleAddress = styled.div`
-  font: normal 16px arial, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
-`
-
-export const StyledFooterNavItem = styled.li`
-  padding-bottom: 24px;
 `
 
 export const StyledFooterLink = styled(LinkBase)`
   color: ${color.grayText};
   font-size: 14px;
+  text-decoration: none;
   &:before {
     content: '-';
     padding-right: 5px;

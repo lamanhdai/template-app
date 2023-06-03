@@ -23,17 +23,6 @@ export const StyledLogo = styled(LinkBase)`
   }
 `
 
-export const StyledNavItem = styled.li`
-  text-align: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #dfdfdf;
-  @media (min-width: 769px) {
-    padding-right: 40px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`
-
 export const StyledNavLinkItem = styled(LinkBase)`
   color: ${color.grayText};
   font-size: 12px;
@@ -46,12 +35,24 @@ export const StyledNavLinkItem = styled(LinkBase)`
 `
 
 export const StyledHeader = styled.div`
+  padding-top: 15px;
+  @media (min-width: 768px) {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
   .header {
     &__brand {
       padding-top: 15px;
       padding-bottom: 15px;
+      @media (min-width: 768px) {
+        text-align: center;
+      }
+      @media (min-width: 1200px) {
+        text-align: left;
+      }
     }
     &__mobile-menu {
+      display: flex;
       width: auto;
       padding-top: 15px;
       padding-bottom: 15px;
@@ -60,6 +61,16 @@ export const StyledHeader = styled.div`
       list-style: none;
       padding-left: 0;
       text-align: center;
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+      }
+    }
+    &-search,
+    &-cart,
+    &-actions {
+      @media (min-width: 768px) {
+        padding-right: 3px;
+      }
     }
   }
   .row {
@@ -71,36 +82,42 @@ export const StyledHeader = styled.div`
     height: 20px;
     background-size: contain;
     display: inline-block;
+    outline: none;
+    border: 0;
   }
   .main-nav {
     border-top: 1px solid #dfdfdf;
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       margin-bottom: 20px;
       border-bottom: 1px solid #dfdfdf;
     }
-    @media (min-width: 991px) {
+    @media (min-width: 1200px) {
       border-top: 0;
       border-bottom: 0;
+      margin-bottom: 0;
     }
     &__list {
       list-style: none;
       padding-left: 0;
-    }
-  }
-
-  /* .button-nav {
-    display: inline-block;
-    @media (min-width: 769px) {
-      display: flex;
-    }
-    &__item {
-      margin-right: 3px;
-      margin-bottom: 5px;
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
         margin-bottom: 0;
       }
+      @media (min-width: 1200px) {
+        justify-content: flex-start;
+      }
+      &-item {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #dfdfdf;
+        @media (min-width: 768px) {
+          padding-right: 40px;
+          border-bottom: 0;
+        }
+      }
     }
-  } */
+  }
 `
 
 export const StyledButtonHeader = styled(Button)`
@@ -166,11 +183,5 @@ export const StyledButtonHeader = styled(Button)`
         background-image: url(${iconLookup.cartIconWhite || ''});
       }
     }
-  }
-`
-
-export const StyledMainNav = styled.ul`
-  @media (min-width: 991px) {
-    margin-left: 80px;
   }
 `
