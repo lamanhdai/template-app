@@ -7,9 +7,11 @@ import {
 } from 'common.style'
 
 export const StyledFooter = styled.footer`
-  @media (min-width: 769px) {
-    padding: 100px 0;
-    border-top: 1px solid #dfdfdf;
+  .container {
+    @media (min-width: 769px) {
+      padding: 100px 0;
+      border-top: 1px solid #dfdfdf;
+    }
   }
   .footer {
     &-column {
@@ -62,4 +64,11 @@ export const StyledFooterButton = styled(BaseButton)`
   font-size: 14px;
   padding: 15px 0;
   border: 0;
+`
+export const StyledAddress = styled.div`
+  background: #f0f0f0;
+  color: #9d9d9d;
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
 `
