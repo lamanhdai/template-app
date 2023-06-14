@@ -1,21 +1,61 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Pagination, Autoplay } from 'swiper';
 
-import img1 from '../../assets/img/1687.jpg';
-import img2 from '../../assets/img/6715526.jpg';
-import img3 from '../../assets/img/tp195-393-audi-presentation-01.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
+import 'swiper/scss/pagination';
+import 'swiper/scss/autoplay';
+
+import img1 from '../../assets/img/blue-2564660_1280-1280x500.jpg';
+import img2 from '../../assets/img/fashion-weeks-29-september-t-m-11-oktober_1280x500_39962.jpg';
+import img3 from '../../assets/img/slider_woman.jpg';
+import {
+  StyledButton,
+  StyledSlider
+} from './index.style'
 
 export default function Slider () {
   return (
+    <StyledSlider className='container'>
     <Swiper
+      modules={[Autoplay, Pagination]}
       spaceBetween={0}
       slidesPerView={1}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
+      pagination={{ clickable: true }}
+      autoplay
     >
-      <SwiperSlide><img src={img1} alt="" className="img-fluid" /></SwiperSlide>
-      <SwiperSlide><img src={img2} alt="" className="img-fluid" /></SwiperSlide>
-      <SwiperSlide><img src={img3} alt="" className="img-fluid" /></SwiperSlide>
+      <SwiperSlide className="position-relative">
+        <img src={img1} alt="" className="img-fluid" />
+        <div className="position-absolute top-50 start-50 translate-middle">
+          <div className="columns col-12 text-white text-center">
+            <h2>New Collection</h2>
+            <h3>For your beauty and fashion</h3>
+            <StyledButton to="#" className="btn cta">See the collection</StyledButton>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="position-relative">
+        <img src={img2} alt="" className="img-fluid" />
+        <div className="position-absolute top-50 start-50 translate-middle">
+          <div className="columns col-12 text-white text-center">
+            <h2>Feel the luxury</h2>
+            <h3>special collection</h3>
+            <StyledButton to="#" className="btn cta">See the collection</StyledButton>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide className="position-relative">
+        <img src={img3} alt="" className="img-fluid" />
+        <div className="position-absolute top-50 start-50 translate-middle">
+          <div className="columns col-12 text-white text-center">
+            <h2>Vogue Style</h2>
+            <h3>For modern women</h3>
+            <StyledButton to="#" className="btn cta">See the collection</StyledButton>
+          </div>
+        </div>
+      </SwiperSlide>
     </Swiper>
+    </StyledSlider>
   )
 }
