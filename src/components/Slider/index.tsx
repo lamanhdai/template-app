@@ -17,42 +17,46 @@ export default function Slider () {
   return (
     <StyledSlider className='container'>
     <Swiper
-      modules={[Autoplay, Pagination]}
+      modules={[Autoplay, Pagination ]}
       spaceBetween={0}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       pagination={{ clickable: true }}
       autoplay
     >
-      <SwiperSlide className="position-relative">
+      <SwiperSlide>
+        <div className="position-relative">
         <img src={img1} alt="" className="img-fluid" />
-        <div className="position-absolute top-50 start-50 translate-middle">
-          <div className="columns col-12 text-white text-center">
+        <div className="slider__text">
+          <div className="columns col-12 text-center">
             <h2>New Collection</h2>
             <h3>For your beauty and fashion</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
         </div>
+        </div>
       </SwiperSlide>
-      <SwiperSlide className="position-relative">
+      <SwiperSlide>
+        <div className="position-relative">
         <img src={img2} alt="" className="img-fluid" />
-        <div className="position-absolute top-50 start-50 translate-middle">
-          <div className="columns col-12 text-white text-center">
+        <div className="slider__text">
+          <div className="columns col-12 text-center">
             <h2>Feel the luxury</h2>
             <h3>special collection</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
         </div>
+        </div>
       </SwiperSlide>
-      <SwiperSlide className="position-relative">
+      <SwiperSlide>
+        <div className="position-relative">
         <img src={img3} alt="" className="img-fluid" />
-        <div className="position-absolute top-50 start-50 translate-middle">
-          <div className="columns col-12 text-white text-center">
+        <div className="slider__text">
+          <div className="columns col-12 text-center">
             <h2>Vogue Style</h2>
             <h3>For modern women</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
+        </div>
         </div>
       </SwiperSlide>
     </Swiper>

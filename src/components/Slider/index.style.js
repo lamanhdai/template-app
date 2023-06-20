@@ -10,10 +10,19 @@ export const StyledSlider = styled.div`
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-border-radius: 0;
   --swiper-pagination-bullet-inactive-opacity: 1;
+  .slider__text {
+    color: ${color.grayText};
+  }
+  .swiper-pagination {
+    top: 90%;
+  }
+  h2 {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
 `
 
 export const StyledButton = styled(BaseLink)`
-  
   background: ${color.white};
   font-family: "novecento_sans_widemedium";
   display: table;
