@@ -28,7 +28,7 @@ export default function Slider () {
         <img src={img1} alt="" className="img-fluid" />
         <div className="slider__text">
           <div className="columns col-12 text-center">
-            <h2>New Collection</h2>
+            <h2 className="slider__product">New Collection</h2>
             <h3>For your beauty and fashion</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
@@ -40,7 +40,7 @@ export default function Slider () {
         <img src={img2} alt="" className="img-fluid" />
         <div className="slider__text">
           <div className="columns col-12 text-center">
-            <h2>Feel the luxury</h2>
+            <h2 className="slider__product">Feel the luxury</h2>
             <h3>special collection</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
@@ -52,7 +52,7 @@ export default function Slider () {
         <img src={img3} alt="" className="img-fluid" />
         <div className="slider__text">
           <div className="columns col-12 text-center">
-            <h2>Vogue Style</h2>
+            <h2 className="slider__product">Vogue Style</h2>
             <h3>For modern women</h3>
             <StyledButton to="#" className="btn cta">See the collection</StyledButton>
           </div>
