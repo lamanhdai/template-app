@@ -8,7 +8,7 @@ export const StyledSlider = styled.div`
     --swiper-pagination-bullet-border-radius: 0;
     --swiper-pagination-bullet-inactive-color: #444;
     --swiper-pagination-bullet-size: 20px;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     --swiper-pagination-top: 80%;
     --swiper-pagination-bullet-inactive-color: #ffffff;
     --swiper-pagination-bullet-inactive-opacity: 1;
@@ -36,7 +36,10 @@ export const StyledSlider = styled.div`
   }
   .swiper-pagination {
     @media (min-width: 768px) {
-      top: 85%;
+      /* top: 85%; */
+    }
+    @media (min-width: 992px) {
+      top: 80%;
     }
   }
   .btn {
@@ -48,6 +51,18 @@ export const StyledSlider = styled.div`
   .swiper-wrapper {
     padding-bottom: 60px;
   }
+  .fader {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fader__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
 `
 
 export const StyledButton = styled(BaseLink)`
@@ -66,7 +81,10 @@ export const StyledButton = styled(BaseLink)`
   @media (min-width: 768px) {
     background: ${color.white};
     color: #444;
-    padding: 25px 60px;
+    padding: 15px;
     font-size: 14px;
+  }
+  @media (min-width: 992px) {
+    padding: 25px 60px;
   }
 `
