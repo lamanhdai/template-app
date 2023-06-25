@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import LinkBase from 'components/Link';
+import BaseLink from 'components/Link';
 import Button from 'components/Button';
 import {
   color,
   iconLookup,
 } from 'common.style'
 
-export const StyledLogo = styled(LinkBase)`
+export const StyledLogo = styled(BaseLink)`
   color: ${color.grayLogoText};
   display: block;
   font-family: "novecento_sans_widedemibold";
@@ -23,7 +23,7 @@ export const StyledLogo = styled(LinkBase)`
   }
 `
 
-export const StyledNavLinkItem = styled(LinkBase)`
+export const StyledNavLinkItem = styled(BaseLink)`
   color: ${color.grayText};
   font-size: 12px;
   font-family: "novecento_sans_widedemibold";

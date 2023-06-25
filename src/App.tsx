@@ -4,6 +4,8 @@ import {
 import Navigation from './components/Navigation'
 import Slider from './components/Slider'
 import FeatureProductList from './components/FeatureProductList'
+import CollectionProductGrid from './components/CollectionProductGrid'
+import Blog from './components/Blog'
 import './App.scss';
 import Footer from 'components/Footer';
 
@@ -14,6 +16,8 @@ function App() {
         <Navigation/>
         <Slider/>
         <FeatureProductList/>
+        <CollectionProductGrid/>
+        <Blog/>
         <Footer/>
       </BrowserRouter>
     </div>

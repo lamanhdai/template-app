@@ -1,11 +1,9 @@
-import React from 'react';
-
 import {
   StyledFeatureProduct,
   StyledProductLink
 } from './index.style'
 
-interface FeatureProduct {
+interface FeatureProductType {
   img: string
   url: string
   productMeta: string
@@ -13,7 +11,7 @@ interface FeatureProduct {
   price: number
 }
 
-export default function FeatureProduct(props: FeatureProduct) {
+export default function FeatureProduct(props: FeatureProductType) {
   const {
     img,
     url,

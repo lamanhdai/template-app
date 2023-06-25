@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LinkBase from 'components/Link';
+import BaseLink from 'components/Link';
 import BaseButton from 'components/Button'
 
 import {
@@ -48,7 +48,7 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const StyledFooterLink = styled(LinkBase)`
+export const StyledFooterLink = styled(BaseLink)`
   color: ${color.grayText};
   font-size: 14px;
   text-decoration: none;

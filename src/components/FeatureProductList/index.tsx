@@ -1,4 +1,3 @@
-import React from 'react';
 import FeatureProduct from 'components/FeatureProduct';
 
 import {
@@ -19,7 +18,7 @@ export default function FeatureProductList() {
         </div>
       </header>
       <div className="row">
-        <div className="col-xl-3">
+        <div className="col-6 col-xl-3">
           <FeatureProduct
             img={img1}
             url={'/'}
@@ -28,27 +27,27 @@ export default function FeatureProductList() {
             price={220.00}
             />
         </div>
-        <div className="col-xl-3">
+        <div className="col-6 col-xl-3">
           <FeatureProduct
-            img={img1}
+            img={img2}
             url={'/'}
             productMeta={'LOREM IPSUM'}
             name={'CONSECTETUR ADIPISICING ELIT'}
             price={220.00}
             />
         </div>
-        <div className="col-xl-3">
+        <div className="col-6 col-xl-3">
           <FeatureProduct
-            img={img1}
+            img={img3}
             url={'/'}
             productMeta={'LOREM IPSUM'}
             name={'CONSECTETUR ADIPISICING ELIT'}
             price={220.00}
             />
         </div>
-        <div className="col-xl-3">
+        <div className="col-6 col-xl-3">
           <FeatureProduct
-            img={img1}
+            img={img4}
             url={'/'}
             productMeta={'LOREM IPSUM'}
             name={'CONSECTETUR ADIPISICING ELIT'}

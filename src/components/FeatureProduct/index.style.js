@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import LinkBase from 'components/Link';
+import BaseLink from 'components/Link';
 
 export const StyledFeatureProduct = styled.div`
   .feature-product__media {
     overflow: hidden;
+    text-align: center;
   }
 
   .feature-product__media img {
@@ -93,5 +94,5 @@ export const StyledFeatureProduct = styled.div`
   }
 `
 
-export const StyledProductLink = styled(LinkBase)`
+export const StyledProductLink = styled(BaseLink)`
 `

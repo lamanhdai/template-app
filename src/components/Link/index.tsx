@@ -7,7 +7,7 @@ interface LinkType {
   url: string
   [k: string]: any
 }
-export default function LinkBase(props: LinkType) {
+export default function BaseLink(props: LinkType) {
   const { classList, children, url, ...rest } = props;
   return (
     <StyledLink to={url} className={rest.className}>{children}</StyledLink>
