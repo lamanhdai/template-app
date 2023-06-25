@@ -5,14 +5,7 @@ import {
 } from '../../common.style';
 
 export const StyledSlider = styled.div`
-    --swiper-pagination-bullet-border-radius: 0;
-    --swiper-pagination-bullet-inactive-color: #444;
-    --swiper-pagination-bullet-size: 20px;
-  @media (min-width: 992px) {
-    --swiper-pagination-top: 80%;
-    --swiper-pagination-bullet-inactive-color: #ffffff;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-  }
+  position: relative;
   .slider__text {
     color: ${color.grayText};
     @media (min-width: 768px) {
@@ -34,35 +27,56 @@ export const StyledSlider = styled.div`
       transform: translate(0 ,-65%);
     }
   }
-  .swiper-pagination {
-    @media (min-width: 768px) {
-      /* top: 85%; */
-    }
-    @media (min-width: 992px) {
-      top: 80%;
-    }
-  }
   .btn {
     margin-top: 20px;
     @media (min-width: 768px) {
       margin-top: 30px;
     }
   }
-  .swiper-wrapper {
-    padding-bottom: 60px;
-  }
   .fader {
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-}
+    overflow: hidden;
+    padding-bottom: 20px;
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
+  }
 
-.fader__slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
+  .fader__slide {
+    float: left;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    margin-right: -100%;
+    width: 100%;
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    @media (min-width: 992px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .dot {
+    width: 12px;
+    height: 20px;
+    background-color: #fff;
+    margin: 5px;
+    border: 4px solid #444;
+    &.active {
+      background-color: #444;
+      border: 4px solid #444;
+      @media (min-width: 992px) {
+        border: 4px solid #fff;
+      }
+    }
+    @media (min-width: 992px) {
+      border: 4px solid #fff;
+    }
+  }
 `
 
 export const StyledButton = styled(BaseLink)`

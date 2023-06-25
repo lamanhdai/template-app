@@ -11,11 +11,16 @@ import {
 } from './index.style'
 
 export default function Slider() {
+  const [currentSlide, setCurrentSlide] = useState(0)
   const [opacities, setOpacities] = useState<number[]>([])
-  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       slides: 3,
       loop: true,
+      initial: 0,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel)
+      },
       detailsChanged(s) {
         const new_opacities = s.track.details.slides.map((slide) => slide.portion)
         setOpacities(new_opacities)
@@ -62,6 +67,22 @@ export default function Slider() {
           </div>
         </div>
       </div>
+      {instanceRef.current && (
+        <div className="dots">
+          {
+            [0, 1, 2].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx)
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            )
+          })}
+        </div>
+      )}
     </StyledSlider>
   )
 }
